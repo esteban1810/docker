@@ -40,3 +40,19 @@ Listado de los últimos comandos que hayas ejecutado.
 
 El comando `history` devuelve un listado de los comandos ejecutados recientemente con número secuencial. Si queremos ejecutar uno de esos comando sin necesidad de escribirlo basta con escribir `!` seguido del número del comando  
 `!5`
+
+#### Apt
+Instalación de dependencias  
+`apt install`
+
+Desintalación de dependencias  
+`apt remove`
+
+Lista todas las dependencias instaladas  
+`apt list`
+
+Desinstala paquetes que no se usen  
+`apt autoremove`
+
+Actualiza la lista de paquetes (Nuevos o actualizaciones)  
+`apt update`
