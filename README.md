@@ -47,6 +47,24 @@ Muestra todos los archivos en lista
 Muestra todos los archivos con más detalle  
 `ls -l`
 
+Crea un directorio  
+`mkdir <nombre_directorio>` 
+
+Mueve un archivo   
+`mv <archivo_mover> <ruta_destino>`  
+
+Crea archivo. Se pueden crear multiples archivos con este comando.  
+`touch <nombre_archivo> <nombre_archivo2`
+
+Eliminar archivos.  
+`rm`  
+
+El `*` nos permite eliminar incidencias.  
+`rm a*.txt`
+
+Sirve para eliminar directorios con su contenido. `-r` pertenece a recursivo.  
+`rm -r <nombre_directorio`
+
 #### Apt
 Instalación de dependencias  
 `apt install`
