@@ -83,7 +83,7 @@ Muestra las `n` últimas líneas del archivo.
 Muestra en tiempo real las líneas que se agreguen al archivo.  
 `tail -f <nombre_archivo>`
 
-### Redirecciones
+### 19. Redirecciones
 `>` con este simbolo se puede enviar un dato hacia un archivo especifico
 
 Se puede concatenar el contenido de dos archivos en uno sólo.  
@@ -130,8 +130,24 @@ root@c482c309ec1e:/# cat ejemplo5
 cat: ejemplo21324: No such file or directory
 ```
 
+### 20. Búsquedas de texto
+Búsquedas dentro de archivos  
+`grep`
 
-#### Apt
+Busca del `<nombre_archivo>` el `<texto_busqueda>`  
+`grep <texto_busqueda> <nombre_archivo> ... <nombre_archivo_n>`
+
+Busca del `<nombre_archivo>` el `<texto_busqueda>`, con `-i` ignora mayúsculas y minúsculas   
+`grep -i <texto_busqueda> <nombre_archivo> ... <nombre_archivo_n>`
+
+**Nota**  
+Se puede agregar `*` para buscar en un grupo de archivos  
+`grep -i <texto_busqueda> *.txt`
+
+También se puede buscar dentro del directorio actual usando `-r` y `.` para indicar que es directorio donde nos encontramos  
+`grep -r <texto_busqueda> .`
+
+### Apt
 Instalación de dependencias  
 `apt install`
 
