@@ -1,6 +1,6 @@
-# docker
+# DOCKER
 
-## Comandos
+## Introducción
 Ejecuta y si no existe instala, y luego ejecuta  
 `docker run <nombre_imagen>`
 
@@ -16,7 +16,7 @@ Contenedores detenidos
 Abrir terminal del sistema operativo  
 `docker run -it ubuntu`
 
-### Ubuntu
+## Terminal Linux
 Muestra los archivos del directorio actual  
 `ls`
 
@@ -81,7 +81,55 @@ Muestra las `n` últimas líneas del archivo.
 `tail -n <numero> <nombre_archivo>` 
 
 Muestra en tiempo real las líneas que se agreguen al archivo.  
-`tail -f <nombre_archivo>` 
+`tail -f <nombre_archivo>`
+
+### Redirecciones
+`>` con este simbolo se puede enviar un dato hacia un archivo especifico
+
+Se puede concatenar el contenido de dos archivos en uno sólo.  
+`cat <nombre_archivo1> <nombre_archivoN> > <nombre_archivo_result>`
+
+**Más Ejemplos**  
+Estamos mostrando todos los archivos incluidos los ocultos con `-a`, además con el `l` a un lado estamos mostrando el detalle de cada archivo contenido y lo estamos enviando a `<nombre_archivo>`  
+`ls -al <nombre_carpeta> > <nombre_archivo>`
+
+Redirecciona y concatena el dato a un archivo existente `>>`  
+```
+root@c482c309ec1e:/# echo Vamos bien >> ejemplo3
+root@c482c309ec1e:/# cat ejemplo3
+Vamos bien
+root@c482c309ec1e:/# echo Vamos bien >> ejemplo3
+root@c482c309ec1e:/# cat ejemplo3 
+Vamos bien
+Vamos bien
+root@c482c309ec1e:/# echo Vamos bien >> ejemplo3
+root@c482c309ec1e:/# cat ejemplo3 
+Vamos bien
+Vamos bien
+Vamos bien
+```
+
+Redireccionar datos que contengan errores. Si no se usa para los errores, no se redireccionará al archivo `2>`
+```
+root@c482c309ec1e:/# cat 124 > ejemplo4
+cat: 124: No such file or directory
+root@c482c309ec1e:/# cat ejemplo4
+root@c482c309ec1e:/# cat 124 2> ejemplo4
+root@c482c309ec1e:/# cat ejemplo4
+cat: 124: No such file or directory
+```
+
+Redireccionar datos que contengan errores cómo de exito en un mismo archivo `2>&1`
+```
+root@c482c309ec1e:/# cat ejemplo2 > ejemplo5 2>&1
+root@c482c309ec1e:/# cat ejemplo5
+-rw-r--r-- 1 root root 4030 Jan 10 06:14 ejemplo
+root@c482c309ec1e:/# cat ejemplo21324 >> ejemplo5 2>&1
+root@c482c309ec1e:/# cat ejemplo5
+-rw-r--r-- 1 root root 4030 Jan 10 06:14 ejemplo
+cat: ejemplo21324: No such file or directory
+```
+
 
 #### Apt
 Instalación de dependencias  
