@@ -65,6 +65,24 @@ El `*` nos permite eliminar incidencias.
 Sirve para eliminar directorios con su contenido. `-r` pertenece a recursivo.  
 `rm -r <nombre_directorio`
 
+Muestra el contenido del archivo  
+`cat <nombre_archivo>` 
+
+Muestra un fragmento del archivo y se mueve por porcentaje usando las flechas.  
+`more <nombre_archivo>` 
+
+Muestra un fragmento del archivo y se mueve por línea usando las flechas.  
+`less <nombre_archivo>`  
+
+Muestra las `n` primeras líneas del archivo.  
+`head -n <numero> <nombre_archivo>` 
+
+Muestra las `n` últimas líneas del archivo.  
+`tail -n <numero> <nombre_archivo>` 
+
+Muestra en tiempo real las líneas que se agreguen al archivo.  
+`tail -f <nombre_archivo>` 
+
 #### Apt
 Instalación de dependencias  
 `apt install`
