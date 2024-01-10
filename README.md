@@ -131,7 +131,7 @@ cat: ejemplo21324: No such file or directory
 ```
 
 ### 20. Búsquedas de texto
-Búsquedas dentro de archivos  
+Búsquedas incidencias en archivos y archivos que lo contienen 
 `grep`
 
 Busca del `<nombre_archivo>` el `<texto_busqueda>`  
@@ -140,12 +140,12 @@ Busca del `<nombre_archivo>` el `<texto_busqueda>`
 Busca del `<nombre_archivo>` el `<texto_busqueda>`, con `-i` ignora mayúsculas y minúsculas   
 `grep -i <texto_busqueda> <nombre_archivo> ... <nombre_archivo_n>`
 
+Para buscar incidencias dentro del directorio actual se usa `-r` y `.` para indicar que es el directorio donde nos encontramos  
+`grep -r <texto_busqueda> .`
+
 **Nota**  
 Se puede agregar `*` para buscar en un grupo de archivos  
 `grep -i <texto_busqueda> *.txt`
-
-También se puede buscar dentro del directorio actual usando `-r` y `.` para indicar que es directorio donde nos encontramos  
-`grep -r <texto_busqueda> .`
 
 ### Apt
 Instalación de dependencias  
